@@ -31,5 +31,6 @@ var removeDuplicates = function (nums) {
   }
   return slow
 };
+removeDuplicates([2, 2])
 // @lc code=end
 
