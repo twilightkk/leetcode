@@ -23,7 +23,7 @@
 }; */
 
 // 使用map 时间O(n) 空间O(n)
-var twoSum = function (nums, target) {
+/* var twoSum = function (nums, target) {
   let map = new Map()
   for (let i = 0; i < nums.length; i++) {
     let temp = target - nums[i]
@@ -32,6 +32,6 @@ var twoSum = function (nums, target) {
     }
     map.set(nums[i], i)
   }
-};
+}; */
 // @lc code=end
 
