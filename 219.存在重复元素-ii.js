@@ -33,5 +33,15 @@ var containsNearbyDuplicate = function (nums,k) {
   }
   return false
 };
+
+// 方法二：滑动窗口
+var containsNearbyDuplicate = function (nums,k) {
+  let set = new Set();
+  for (let i = 0; i < nums.length; i++) {
+    if()
+    
+  }
+};
+
 // @lc code=end
 
