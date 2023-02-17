@@ -32,26 +32,27 @@
  * @param {number[]} nums
  * @return {string[]}
  */
+// 方法：保留两个指针指向 首和尾,只需判断在不连续的情况下，首尾两个指针是否相等，处理是否是放入单个数字，还是'num->num'这种格式。
+// 时间:O(n)
+// 空间：O(1)
 var summaryRanges = function(nums) {
   let res=[]
-  let isContinue=false
-  for (let i = 0; i < nums.length; i++) {
-    for (let j = i+1; j < nums.length; j++) {
-      if(nums[i]==(nums[j]-1)){
-        isContinue=true
-        continue;
-      }else if(nums[j]-1>nums[i]){
-        if(isContinue){
-          res.push(nums[i])
-          break;
-        }else{
-          res.push(`${nums[i]}=>${nums[j]}`)
-        }
-      }
-      
-    }
-    
+  let n = nums.length,i=0
+ while (i<n) {
+  let temp = ''+nums[i]
+  let j = i
+  while (nums[i]==nums[i+1]-1) {
+      i++
   }
+  if(j<i){
+      temp=temp+'->'+nums[i]
+      res.push(temp)
+  }else{
+      res.push(temp)
+  }
+  i++;
+ }
+ return res
 };
 // @lc code=end
 
