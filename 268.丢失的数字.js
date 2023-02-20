@@ -33,7 +33,7 @@ var missingNumber = function(nums) {
 // 高斯求和公式为  (n(n+1))/2 得到总和的数 减去 缺少的数的和，即为缺少数字
 // 时间O(n)
 // 空间O(1)
-var missingNumber = function(nums) {
+/* var missingNumber = function(nums) {
   let n =nums.length;
   let total = n*(n+1)/2
   let arrSum=0;
@@ -42,6 +42,6 @@ var missingNumber = function(nums) {
   }
   return total-arrSum
   
-};
+}; */
 // @lc code=end
 
